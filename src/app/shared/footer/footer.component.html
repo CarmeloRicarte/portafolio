@@ -1,27 +1,44 @@
-<footer class="ae-container-fluid rk-footer ">
-  <div class="ae-grid ae-grid--collapse">
-    <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
-      <ul class="rk-menu rk-footer-menu">
-        <li class="rk-menu__item"><a routerLink="home" class="rk-menu__link">Inicio</a>
-        </li>
-        <li class="rk-menu__item"><a routerLink="about" class="rk-menu__link">Sobre mí</a>
-        </li>
-        <li class="rk-menu__item"><a routerLink="misdesarollos" class="rk-menu__link">Mis Desarrollos</a>
-        </li>
-      </ul>
-      <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">{{ anio }} CARMELO'S PORTFOLIO </span>Todos los derechos reservados.</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <footer class="ae-container-fluid rk-footer">
+    <div class="ae-grid ae-grid--collapse">
+      <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
+        <ul class="rk-menu rk-footer-menu">
+          <li class="rk-menu__item">
+            <a class="rk-menu__link"
+               routerLink="home">{{_servicio.info.titulo}}</a>
+          </li>
+          <li class="rk-menu__item">
+            <a class="rk-menu__link"
+               routerLink="about">Sobre mí</a>
+          </li>
+          <li class="rk-menu__item">
+            <a class="rk-menu__link"
+               routerLink="misdesarrollos">Mis Desarrollos</a>
+          </li>
+        </ul>
+        <p class="rk-footer__text rk-footer__copy"><span class="ae-u-bold">©</span> <span class="ae-u-bolder">{{ anio }} {{_servicio.info.titulo}}</span> Todos los derechos reservados.</p>
+      </div>
+      <div class="ae-grid__item item-lg-4 au-xs-ta-center">
+        <a class="rk-social-btn"
+           [href]="_servicio.info.linkedin"
+           target="_blank"><img height="32" src="https://unpkg.com/simple-icons@latest/icons/linkedin.svg" width="32"></a>
+        <a class="rk-social-btn"
+           [href]="_servicio.info.github"
+           target="_blank"><img height="32" src="https://unpkg.com/simple-icons@latest/icons/github.svg" width="32"></a>
+        <a class="rk-social-btn"
+           [href]="_servicio.info.bitbucket"
+           target="_blank"><img height="32" src="https://unpkg.com/simple-icons@latest/icons/bitbucket.svg" width="32"></a>
+      </div>
+      <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
+        <p class="rk-footer__text rk-footer__contact"><span class="ae-u-bold">Email:</span> <span class="ae-u-bolder"><a class="rk-dark-color"
+           href="mailto:{{_servicio.info.email}}">{{_servicio.info.email}}</a></span></p>
+      </div>
     </div>
-    <div class="ae-grid__item item-lg-4 au-xs-ta-center">
-      <a href="https://www.linkedin.com/in/carmelo-ricarte-rocamora-a824a7112/" class="rk-social-btn">
-        <img height="32" width="32" src="https://unpkg.com/simple-icons@latest/icons/linkedin.svg" />
-      </a>
-      <a href="https://github.com/CarmeloRicarte" class="rk-social-btn">
-        <img height="32" width="32" src="https://unpkg.com/simple-icons@latest/icons/github.svg" />
-      </a>
-    
-    </div>
-    <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
-      <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="#0" class="rk-dark-color ">cricarterocamora@icloud.com</a></span></p>
-    </div>
-  </div>
-</footer>
+  </footer>
+</body>
+</html>
