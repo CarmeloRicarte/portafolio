@@ -31,7 +31,6 @@ export class ProductosService {
   getProducto( id: string ) {
     return this.http.get(`https://carmelo-s-portafolio.firebaseio.com/productos/${ id }.json`);
   }
-
   buscarProducto ( termino: string ) {
     if (this.productos.length === 0 ) {
       // cargar productos
